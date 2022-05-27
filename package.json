@@ -1,0 +1,31 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "Hardhat setup for writing, testing, deploying contracts to various netowrks. ",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "dotenv -- cross-var hardhat test",
+    "compile": "dotenv -- cross-var hardhat compile",
+    "fork": "dotenv -- cross-var hardhat node",
+    "deploy": "dotenv -- cross-var hardhat --network %DEPLOYER_NETWORK% run scripts/deploy.js"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@rari-capital/solmate": "^6.4.0",
+    "chai": "^4.3.6",
+    "cross-var": "^1.1.0",
+    "dotenv": "^16.0.0",
+    "dotenv-cli": "^5.1.0",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.2",
+    "hardhat": "^2.9.4",
+    "hardhat-gas-reporter": "^1.0.8",
+    "husky": "^7.0.4",
+    "update-dotenv": "^1.1.1"
+  }
+}
